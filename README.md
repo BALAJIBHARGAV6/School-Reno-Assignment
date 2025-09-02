@@ -1,5 +1,12 @@
 
-# School-Reno-Assignment
+# 🎓 Elite School Management System
+
+> **Reno Platforms Assignment Submission**  
+> **Framework**: Next.js 15.5.2  
+> **Submission Date**: September 2, 2025  
+> **Live Demo**: https://assignment-o86puae5z-balaji-bhargavs-projects.vercel.app
+
+A modern, responsive school management application built with cutting-edge technologies and featuring a beautiful clean white theme.ool-Reno-Assignment
 
 ## �️ Elite School Management System
 
