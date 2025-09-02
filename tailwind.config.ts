@@ -1,0 +1,100 @@
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+        primary: {
+          DEFAULT: '#1a365d',
+          50: '#f7fafc',
+          100: '#edf2f7',
+          200: '#e2e8f0',
+          300: '#cbd5e0',
+          400: '#a0aec0',
+          500: '#718096',
+          600: '#4a5568',
+          700: '#2d3748',
+          800: '#1a202c',
+          900: '#171923',
+        },
+        secondary: {
+          DEFAULT: '#2c5282',
+          50: '#ebf8ff',
+          100: '#bee3f8',
+          200: '#90cdf4',
+          300: '#63b3ed',
+          400: '#4299e1',
+          500: '#3182ce',
+          600: '#2c5282',
+          700: '#2a4365',
+          800: '#1a365d',
+          900: '#1a202c',
+        },
+        accent: {
+          DEFAULT: '#d69e2e',
+          50: '#fffbeb',
+          100: '#fef3c7',
+          200: '#fde68a',
+          300: '#fcd34d',
+          400: '#fbbf24',
+          500: '#f59e0b',
+          600: '#d97706',
+          700: '#b45309',
+          800: '#92400e',
+          900: '#78350f',
+        },
+        success: {
+          DEFAULT: '#38a169',
+          50: '#f0fff4',
+          100: '#c6f6d5',
+          200: '#9ae6b4',
+          300: '#68d391',
+          400: '#48bb78',
+          500: '#38a169',
+          600: '#2f855a',
+          700: '#276749',
+          800: '#22543d',
+          900: '#1c4532',
+        },
+        warm: {
+          DEFAULT: '#744210',
+          50: '#fefcf3',
+          100: '#fef7e0',
+          200: '#feebc8',
+          300: '#fbd38d',
+          400: '#f6ad55',
+          500: '#ed8936',
+          600: '#dd6b20',
+          700: '#c05621',
+          800: '#9c4221',
+          900: '#744210',
+        }
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['Georgia', 'Times New Roman', 'serif'],
+      },
+      boxShadow: {
+        'elegant': '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
+        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+        'card-hover': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'elegant-gradient': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        'warm-gradient': 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+      },
+    },
+  },
+  plugins: [],
+};
+
+export default config;
