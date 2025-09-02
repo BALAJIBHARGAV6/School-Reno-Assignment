@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
 import { toast, Toaster } from 'react-hot-toast';
+import Link from 'next/link';
 
 interface SchoolFormData {
   name: string;
@@ -88,7 +89,7 @@ export default function AddSchool() {
       } else {
         throw new Error('Failed to add school');
       }
-    } catch (error) {
+    } catch {
       toast.error('Failed to add school. Please try again.');
     } finally {
       setLoading(false);
@@ -102,7 +103,7 @@ export default function AddSchool() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-20">
             <div className="flex items-center">
-              <a href="/" className="flex items-center space-x-3">
+              <Link href="/" className="flex items-center space-x-3">
                 <span className="text-3xl">🏛️</span>
                 <div>
                   <span className="text-2xl font-bold bg-gradient-to-r from-gray-800 via-blue-600 to-indigo-600 bg-clip-text text-transparent">
@@ -112,28 +113,28 @@ export default function AddSchool() {
                     Excellence in Education
                   </div>
                 </div>
-              </a>
+              </Link>
             </div>
             
             <div className="flex items-center space-x-2">
-              <a href="/">
+              <Link href="/">
                 <div className="flex items-center space-x-2 px-6 py-3 rounded-xl transition-all duration-300 font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 backdrop-blur-md border border-gray-100 hover:border-gray-200">
                   <span className="text-lg">🏛️</span>
                   <span className="hidden sm:block">Home</span>
                 </div>
-              </a>
-              <a href="/addSchool">
+              </Link>
+              <Link href="/addSchool">
                 <div className="flex items-center space-x-2 px-6 py-3 rounded-xl transition-all duration-300 font-medium bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg shadow-blue-500/25">
                   <span className="text-lg">✨</span>
                   <span className="hidden sm:block">Add School</span>
                 </div>
-              </a>
-              <a href="/showSchools">
+              </Link>
+              <Link href="/showSchools">
                 <div className="flex items-center space-x-2 px-6 py-3 rounded-xl transition-all duration-300 font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 backdrop-blur-md border border-gray-100 hover:border-gray-200">
                   <span className="text-lg">📚</span>
                   <span className="hidden sm:block">View Schools</span>
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
